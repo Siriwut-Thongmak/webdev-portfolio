@@ -1,0 +1,471 @@
+/* --------------------------------- */
+/* SETUP */  
+/* ---------------------------------*/
+
+/* orange color: #e67e22 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #e8e8e8;
+    color: #555;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* --------------------------------- */
+/* REUSABLE COMPONENTS */
+/* --------------------------------- */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 40px 0;
+    padding-bottom: 10px;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    /* edit from 100 */
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: rgb(60, 60, 60);
+    font-size: 250%;
+    word-spacing: 5px;
+    letter-spacing: 1.5px;
+    /* add  */
+
+}
+
+h2 {
+    font-size: 150%;
+    /* edit from 120% */
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    /* add  */
+    font-weight: 900;
+}
+
+h2:after {
+    display: block;
+    content: " ";
+    background-color: #e67e22;
+    height: 2px;
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 105%;
+    margin-bottom: 15px;
+}
+
+.box {
+    padding: 1%;  /* edit from paddin-right: 1%; */
+    margin-bottom: 15px;
+}
+
+.box img {
+    width: 100%;
+/*    height: auto;  //unneccessary */
+    margin-bottom: 15px;
+}
+
+figure{
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+/* ----- PARAGRAPH -----*/
+.long-copy {
+    width: 70%;
+    margin-left: 15%;
+    line-height: 135%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height:130%
+}
+
+/* ----- LINK ----- */
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+}
+
+
+/* ----- BUTTONS ----- */
+
+.btn:link,
+.btn:visited,
+input[type="submit"] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    border: 1px solid #e67e22;
+
+    /* edit add color and merge lines */
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    margin-right: 15px;
+    /* add */
+}
+
+.btn:hover,
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+    background-color: #cf6d17;
+    border: 1px solid #cf6d17;
+}
+
+.btn-std:link,
+.btn-std:visited,
+input[type="submit"] {
+    background-color: #e67e22;
+    color: #fff;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    color: #e67e22;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    color: #fff;
+}
+
+.btn-table:link,
+.btn-table:visited {
+    width: 100%;
+    height: 100%;
+    border: none #cf6d17;
+    font-weight: 300;
+    text-decoration: none;
+    /* edit add color and merge lines */
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    /* add */
+}
+
+.btn-table:hover,
+.btn-table:active {
+    background-color: #cf6d17;
+}
+/* --------------------------------- */
+/* HEADER */
+/* ---------------------------------*/
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/brewing.jpg);
+    height: 15vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  /* add  */
+}
+
+.header-text-box {
+    position: absolute;
+    /* width: 1140px; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 50px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited  {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;   /* add */
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #cf6d17;
+}
+
+
+/* --------------------------------- */
+/* SECTION 6 Signup */
+/* ----------------------------------*/
+.section-signup{
+    background-color: #e5e5e5;
+}
+
+.signup-box{
+    /*border: 1px solid #eee;*/ /*can be ignore*/
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: 2px 2px 4px #d0d0d0;
+    margin-left: 5%;
+    background-color: #fff;
+}
+
+.signup-box ul{
+    list-style: none;
+}
+
+.signup-box ul li{
+    padding: 5px 5px;
+}
+
+.signup-box div{
+    padding: 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.signup-box div:first-child{
+    background-color: #f5f5f5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.signup-box div:last-child{
+    border: none;
+    text-align: center;
+}
+
+.plan-price{
+    font-size: 300%;
+    font-weight: 100;
+    color: #e67e22;
+}
+
+.plan-price span{
+    font-size: 30%;
+    font-weight: 300;
+}
+
+
+/* --------------------------------- */
+/* SECTION 7 FORM */
+/* ----------------------------------*/
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input[type="text"],input[type="email"],input[type="tel"],input[type="date"],input[type="password"],input[type = "number"],select,textarea{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100%;
+}
+
+input[type="checkbox"]{
+    margin: 10px 5px 10px 0;
+}
+/* --------------------------------- */
+/* FOOTER */
+/* ----------------------------------*/
+
+footer{
+    background-color: #333;
+    height: 15vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  /* add  */
+}
+
+.footer-nav{
+    list-style: none;
+    float: left;
+}
+
+.social-nav{
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.social-nav li{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.footer-nav li:last-child{
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-nav li a:link,
+.social-nav li a:visited{
+    border: 0;
+    color: #888;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color: #ccc;
+}
+
+.social-nav li a:hover,
+.social-nav li a:active{
+    font-size: 160%;
+}
+
+.ion-social-facebook:hover,
+.ion-social-facebook:active{
+    color: #3b5998;
+}
+
+.ion-social-twitter:hover,
+.ion-social-twitter:active{
+    color: #55acee;
+}
+
+footer p{
+    color:888;
+    text-align: center;
+    font-size: 90%;
+    margin-top: 20px;
+}
+/* --------------------------------- */
+/* Table */
+/* ----------------------------------*/
+table,
+th,
+td {
+    margin: 0 auto;
+    /*center*/
+    border: 1px solid;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table {
+    margin-bottom: 25px;
+}
+
+th {
+    height: 70px;
+    background-color: #efa96c;
+}
+
+td {
+    height: 40px;
+    padding: 15px;
+}
+
+tr {
+    background-color: #fff;
+}
+
+tr:hover,
+tr:active {
+    background-color: #d1d1d1;
+}
+
+.left_a {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.alert {
+    border: 0.5px solid rgba(0, 114, 28, 0.39);
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 150%;
+    text-align: center;
+    color: #007413;
+    background-color: #b6fec2;
+    width: 40%;
+    padding: 10px;
+}
+
+.search{
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+/* --------------------------------- */
+/* index */
+/* ----------------------------------*/
+figure a{
+    height: 100px;
+}
+
+.moive-btn :link,
+.moive-btn :visited{
+    box-sizing: border-box;
+    opacity: 1;
+    transition: opacity 1.5s;
+}
+
+.moive-btn :hover,
+.moive-btn :active{
+    /* transition:  */
+    box-sizing: border-box;
+    opacity: 0.7;
+}
